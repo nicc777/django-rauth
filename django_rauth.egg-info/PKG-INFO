@@ -1,0 +1,52 @@
+Metadata-Version: 1.1
+Name: django-rauth
+Version: 0.1
+Summary: A simple Django app to test authentication via a simple HTTP POST
+Home-page: https://www.example.com/
+Author: Nicolaas Coetzee
+Author-email: nicc777@gmail.com
+License: BSD License
+Description: =====
+        rauth
+        =====
+        
+        rauth is a simple authentication platform that can be used to simulate external 
+        authentication from any app.
+        
+        A sample test is included in the file rauth_test.sh (depends on curl).
+        
+        Quick start
+        -----------
+        
+        1. Add "polls" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'rauth',
+            ]
+        
+        2. Include the polls URLconf in your project urls.py like this::
+        
+            url(r'^rauth/', include('rauth.urls')),
+        
+        3. Run `python manage.py migrate` to create the polls models.
+        
+        4. Run `python manage.py loaddata user.json` to load the sample data
+        
+        5. Start the development server and visit http://127.0.0.1:8000/rauth/  
+        
+        5. Visit http://127.0.0.1:8000/rauth/ to test, or run the rauth_test.sh script
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

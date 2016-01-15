@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+include rauth/rauth_test.sh
+include rauth/db.json
