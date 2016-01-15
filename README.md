@@ -17,7 +17,7 @@ Simple remote authentication service created as a Django app.
 
 3. Run `python manage.py migrate` to create the polls models.
 
-4. Run `python manage.py loaddata user.json` to load the sample data
+4. Run `python manage.py loaddata db.json` to load the sample data
 
 5. Start the development server and visit http://127.0.0.1:8000/rauth/  
 
