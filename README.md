@@ -4,22 +4,36 @@ Simple remote authentication service created as a Django app.
 
 ## Setup
 
-1. Add "polls" to your INSTALLED_APPS setting like this:
+* Add "polls" to your INSTALLED_APPS setting like this:
 
     INSTALLED_APPS = [
         ...
         'rauth',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+* Include the polls URLconf in your project urls.py like this:
 
     url(r'^rauth/', include('rauth.urls')),
 
-3. Run `python manage.py migrate` to create the polls models.
+* Run `python manage.py migrate` to create the polls models.
 
-4. Run `python manage.py loaddata db.json` to load the sample data
+* Run `python manage.py loaddata db.json` to load the sample data
 
-5. Start the development server and visit http://127.0.0.1:8000/rauth/  
+* Start the development server and visit http://127.0.0.1:8000/rauth/  
 
-6. Visit http://127.0.0.1:8000/rauth/ to test, or run the rauth_test.sh script  
+* Visit http://127.0.0.1:8000/rauth/ to test, or run the rauth_test.sh script  
+
+## Example
+
+After the application has started, you can POST data to the app with two mandatory fields: `username` and `password`.
+
+Based on how the user is configured in the database, a JSON object will be returned with the authentication result and reason.
+
+I have used this approach to test and play with Django - especially customizing the authentication to use external sources. 
+
+## Final Note
+
+This is for educational use mainly. DO NOT use this as an authentication mechanism - it has not been designed with true security in mind at all!
+
+Future enhancements will be mainly for my own purposes. 
 
